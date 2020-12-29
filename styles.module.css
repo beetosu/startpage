@@ -12,12 +12,12 @@
 }
 
 .title p {
-    font-size: 3vh;
+    font-size: 2.5vh;
 }
 
 .title p button {
     border: none;
-    font-size: 3vh;
+    font-size: 2.5vh;
     background-color: transparent;
     transition: color 0.33s ease;
 }
@@ -26,25 +26,33 @@
     color: #999;
 }
 
+.panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lists {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .tasklist a {
     color: #000000;
-    transition: color 0.33s ease;
-}
-
-.tasklist {
-    margin: auto;
-    width: 25%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: left;
-}
-
-.tasklist li {
     text-align: left;
+    transition: color 0.33s ease;
 }
 
 .tasklist a:hover {
     color: #999;
+}
+
+.weather ul {
+    text-align: left;
+}
+
+.calendar ul {
+    text-align: left;
 }
