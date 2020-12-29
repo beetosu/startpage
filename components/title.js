@@ -59,7 +59,7 @@ class Title extends React.Component {
         //for the indication of time of day, i'm having that hard set to native time
         //this is so if i add color stuff for time of day, checking timezones doesn't create whiplash
         let timezone = this.timezones[this.state.currentTZ]        
-        let nativeHour = (this.state.hour - this.nativeTZ) % 24
+        let nativeHour = (this.state.hour + this.nativeTZ) % 24
         if (nativeHour < 0) nativeHour = 24 - nativeHour*-1
         let timeofDay = nativeHour < 12 && nativeHour > 5 ? "Morning" : nativeHour >= 12 && nativeHour < 18 ? "Afternoon" : "Evening"
 
@@ -73,7 +73,8 @@ class Title extends React.Component {
 
         let outputtedTime = (currentHour % 24).toString() + ":" + currentMin
         if (!this.state.inMilitaryTime) {
-            outputtedTime = (currentHour % 12).toString() + ":" + currentMin
+            if (currentHour == 0) outputtedTime = "12:" + currentMin
+            else outputtedTime = (currentHour % 12).toString() + ":" + currentMin
             currentHour % 24 >= 12 ? outputtedTime += "PM" : outputtedTime += "AM"
         }
         return (
