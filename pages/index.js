@@ -14,7 +14,7 @@ export default function Home({cards}) {
       </Head>
       <main>
         <Title />
-        <Panels />
+        <Panels cards={cards}/>
       </main>
     </div>
   )

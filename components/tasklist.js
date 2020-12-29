@@ -17,8 +17,13 @@ class TaskList extends React.Component {
 
     render() {
         return (
-            <div className={styles.tasklist}>
-                [Task List Goes Here]
+            <div>
+                <h2>To Do:</h2>
+                <ul className={styles.tasklist}>
+                    {this.props.cards.map((card) => (
+                        <a href={card.url}><li id={card.id}>{card.labels.map((label) => ("["+label.name+"]"))} {card.name}</li></a>
+                    ))}
+                </ul>
             </div>
         )
     }

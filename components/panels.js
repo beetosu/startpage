@@ -4,12 +4,15 @@ import Calendar from "../components/calendar"
 import Weather from "../components/weather"
 import Search from "../components/search"
 
-export default function Panels() {
+export default function Panels({cards}) {
     return (
         <div className={styles.panels}>
-            <TaskList />
+            <TaskList cards={cards}/>
+            <br/>
             <Calendar />
+            <br/>
             <Weather />
+            <br/>
             <Search />
         </div>
     )
