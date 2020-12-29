@@ -18,7 +18,7 @@ class TaskList extends React.Component {
     render() {
         return (
             <div className={styles.tasklist}>
-                Task List
+                [Task List Goes Here]
             </div>
         )
     }

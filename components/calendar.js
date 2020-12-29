@@ -18,7 +18,7 @@ class Calendar extends React.Component {
     render() {
         return (
             <div className={styles.calendar}>
-                Calendar
+                [Calendar Goes Here]
             </div>
         )
     }

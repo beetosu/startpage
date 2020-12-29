@@ -18,7 +18,7 @@ class Search extends React.Component {
     render() {
         return (
             <div className={styles.search}>
-                Search
+                [Search Goes Here]
             </div>
         )
     }

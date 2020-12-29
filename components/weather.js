@@ -18,7 +18,7 @@ class Weather extends React.Component {
     render() {
         return (
             <div className={styles.weather}>
-                Weather
+                [Weather Goes Here]
             </div>
         )
     }
